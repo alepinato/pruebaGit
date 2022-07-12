@@ -58,5 +58,18 @@ namespace ProyCajasTexto
                 e.Handled = true;
             }
         }
+
+        private void textBox3_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            
+            textBox3.Multiline = true;
+            textBox3.Height = 100;
+            textBox3.Width = 150;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
