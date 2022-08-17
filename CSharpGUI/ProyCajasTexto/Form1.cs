@@ -22,7 +22,6 @@ namespace ProyCajasTexto
             if (Char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
-
             }
             else if (char.IsControl(e.KeyChar))
             {
@@ -62,14 +61,29 @@ namespace ProyCajasTexto
         private void textBox3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             
-            textBox3.Multiline = true;
+            textBox3.Multiline = false;
             textBox3.Height = 100;
             textBox3.Width = 150;
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
+            TextBox t = (TextBox)sender;
+            if (t.Text.Length > 0)
+            {
+                textBox3.BackColor = Color.Black;
+            }
+            else if (t.Text.Length <= 0)
+            {
+                textBox3.BackColor = Color.Red;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
+
+       
     }
 }
