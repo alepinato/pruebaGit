@@ -58,5 +58,45 @@ namespace proy_CRUD_File
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (sfdGuardar.ShowDialog() == DialogResult.OK)
+                {
+                    if (File.Exists(sfdGuardar.FileName))
+                    {
+                        string txt = sfdGuardar.FileName;
+                        StreamWriter textoguardar = File.CreateText(txt);
+                        textoguardar.Write(rtbContenido.Text);
+                        textoguardar.Flush();
+                        textoguardar.Close();
+
+                        txtProducto.Text = txt;
+
+                    }
+                    else
+                    {
+                        string txt = sfdGuardar.FileName;
+                        StreamWriter textoguardar = File.CreateText(txt);
+                        textoguardar.Write(rtbContenido.Text);
+                        textoguardar.Flush();
+                        textoguardar.Close();
+
+                        txtProducto.Text = txt;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

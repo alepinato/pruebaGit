@@ -36,6 +36,7 @@
             this.btnEscribir = new System.Windows.Forms.Button();
             this.btnLeer = new System.Windows.Forms.Button();
             this.ofdLeer = new System.Windows.Forms.OpenFileDialog();
+            this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -80,6 +81,7 @@
             this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEscribir
             // 
@@ -118,6 +120,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +136,7 @@
         private System.Windows.Forms.Button btnEscribir;
         private System.Windows.Forms.Button btnLeer;
         private System.Windows.Forms.OpenFileDialog ofdLeer;
+        private System.Windows.Forms.SaveFileDialog sfdGuardar;
     }
 }
 
