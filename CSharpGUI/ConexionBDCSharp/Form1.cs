@@ -14,16 +14,16 @@ namespace ConexionBDCSharp
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            string servidor = txtServidor.Text;
-            string usuarios = txtUsuario.Text;
-            string pass = txtpass.Text;
-            string puerto = txtPuerto.Text;
+            string servidor = "localhost";
+            string usuarios = "root";
+            string pass = "";
+            string puerto = "3306";
 
             string cadenaconexion = "server=" + servidor + 
                                     ";port=" + puerto + 
                                     ";user id=" + usuarios + 
                                     ";password=" + pass + 
-                                    ";database=mysql;";
+                                    ";database=almacenbd;";
             string datos = "";
             MySqlConnection conexionBD = new MySqlConnection(cadenaconexion);
 
